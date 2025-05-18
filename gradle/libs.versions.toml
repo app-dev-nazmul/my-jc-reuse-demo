@@ -1,5 +1,6 @@
 [versions]
 agp = "8.10.0"
+coilCompose = "3.2.0"
 kotlin = "2.0.21"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -11,6 +12,8 @@ composeBom = "2024.09.00"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -24,6 +27,13 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-android-test = { module = "io.insert-koin:koin-android-test" }
+koin-androidx-workmanager = { module = "io.insert-koin:koin-androidx-workmanager" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines" }
+koin-ktor = { module = "io.insert-koin:koin-ktor" }
+koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

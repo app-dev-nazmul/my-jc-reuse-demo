@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt") // Add this line for annotation processing
+
 }
 
 android {
@@ -56,4 +58,19 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+
+    implementation(libs.koin.core)
+    implementation(libs.koin.ktor)
+
+    // Declare the koin dependencies that you need
+    implementation(libs.koin.android)
+    implementation(libs.koin.core.coroutines)
+    implementation(libs.koin.androidx.workmanager)
+
+    // Works with test libraries too!
+    testImplementation(libs.koin.test.junit4)
+    testImplementation(libs.koin.android.test)
 }
